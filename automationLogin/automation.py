@@ -18,7 +18,7 @@ import csv
     your_csv_file.close()"""
 
 driver = webdriver.Chrome('ChromeLocation')
-URL = "http://www.togetherauction.com/uumontclair/login;jsessionid=1ktzlahkz8b1q1dr8klg9dv0k7?1"
+URL = "URLYouNeed"
 
 #This helps to login as Ursula on the /uumontclair site and then download a spreadsheet containing items
 def download_item():
@@ -32,12 +32,13 @@ def download_item():
 #This helps to login as Ursula on the /uumontclair site and then upload the winners
 def sales_winning():
     driver.get(URL)
-    driver.find_element_by_name("phone").send_keys("213-7682")
-    driver.find_element_by_name("pin").send_keys("crawley3")
+    driver.find_element_by_name("phone").send_keys("xxxxxxxx")
+    driver.find_element_by_name("pin").send_keys("xxxxxx")
     driver.find_element_by_xpath("//input[@value='Login']").click()
     driver.find_element_by_link_text('Sales').click()
     driver.find_element_by_name('itemNumber').send_keys('D5')
     driver.find_element_by_xpath("//input[@name='paddle']").send_keys('4')
     driver.find_element_by_xpath("//input[@name='qty']").send_keys('0')
     driver.find_element_by_xpath("//input[@name='price']").send_keys('0')
+
 download_item()
